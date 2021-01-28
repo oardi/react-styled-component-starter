@@ -1,10 +1,12 @@
 import React from "react";
+import { ThemeProvider } from 'styled-components';
 import "./style.scss";
 import { Button } from "./Button";
+import { theme } from './theme';
 
 export default function App() {
 	return (
-		<div>
+		<ThemeProvider theme={theme}>
 			<h1>React Styled components</h1>
 
 			<Button>primary</Button>
@@ -21,6 +23,6 @@ export default function App() {
 			<Button variant="success" style={{ marginLeft: "10px" }}>
 				success
       		</Button>
-		</div>
+		</ThemeProvider>
 	);
 }

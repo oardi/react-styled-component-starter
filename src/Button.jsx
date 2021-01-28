@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ButtonBase = (props) => {
 	const { children, ...rest } = props;
@@ -26,11 +26,23 @@ export const Button = styled(ButtonBase)`
 		`
 	}
 
+	// using theme
+	/* ${({ variant }) => variant &&
+		css`
+			color: ${({ theme }) => theme.colors[variant]}; // var(--${variant}-text)
+			background-color: ${({ theme }) => theme.colors[variant]};
+		`
+	} */
+
 	${({ shadow }) => shadow && `box-shadow: var(--shadow);`}
 
 	&:hover {
 		cursor: pointer;
 		background: var(--primary-darker);
 		background: var(${({ variant }) => variant && `--${variant}-darker`});
+	}
+
+	@media ${({ theme }) => theme.mediaQueries.sm} {
+		/* color: red; */
 	}
 `;
