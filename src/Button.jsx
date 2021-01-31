@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-export const ButtonBase = (props) => {
+const ButtonBase = (props) => {
 	const { children, ...rest } = props;
 	return <button {...rest}>{children}</button>;
 };
@@ -40,9 +40,5 @@ export const Button = styled(ButtonBase)`
 		cursor: pointer;
 		background: var(--primary-darker);
 		background: var(${({ variant }) => variant && `--${variant}-darker`});
-	}
-
-	@media ${({ theme }) => theme.mediaQueries.sm} {
-		/* color: red; */
 	}
 `;
