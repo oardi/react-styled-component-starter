@@ -8,37 +8,21 @@ const ButtonBase = (props) => {
 
 export const Button = styled(ButtonBase)`
 	border: 0;
-	border-radius: var(--borderRadius);
 	padding: 6px 16px;
-	min-width: var(--buttonMinWidth);
 	line-height: 1.75;
 	outline: none;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-	color: var(--primary-text);
-	background-color: var(--primary);
+	${({ theme, variant }) => css`
+		color: ${theme.palette[variant].contrastText};
+		background-color: ${theme.palette[variant].main};
+		border-radius: ${theme.shape.borderRadius}px;
+		min-width: ${theme.button.minWidth}px;
 
-	${({ variant }) => variant &&
-		css`
-			color: var(--${variant}-text);
-			background-color: var(--${variant});
-		`
-	}
-
-	// using theme
-	/* ${({ variant }) => variant &&
-		css`
-			color: ${({ theme }) => theme.colors[variant]}; // var(--${variant}-text)
-			background-color: ${({ theme }) => theme.colors[variant]};
-		`
-	} */
-
-	${({ shadow }) => shadow && `box-shadow: var(--shadow);`}
-
-	&:hover {
-		cursor: pointer;
-		background: var(--primary-darker);
-		background: var(${({ variant }) => variant && `--${variant}-darker`});
-	}
+		&:hover {
+			cursor: pointer;
+			background-color: ${theme.palette[variant].dark};
+		}
+	`}
 `;

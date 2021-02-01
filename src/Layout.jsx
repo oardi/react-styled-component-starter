@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const LayoutBase = (props) => {
 	const { children, ...rest } = props;
@@ -7,23 +7,26 @@ const LayoutBase = (props) => {
 };
 
 export const Layout = styled(LayoutBase)`
+	:root {
+	}
+
 	@media ${({ theme }) => theme.mediaQueries.xs} {
-		color: red;
+		/* color: red; */
 	}
 
 	@media ${({ theme }) => theme.mediaQueries.sm} {
-		color: blue;
+		/* color: blue; */
 	}
 
 	@media ${({ theme }) => theme.mediaQueries.md} {
-		color: black;
+		/* color: black; */
 	}
 
 	@media ${({ theme }) => theme.mediaQueries.lg} {
-		color: yellow;
+		/* color: yellow; */
 	}
 
 	@media ${({ theme }) => theme.mediaQueries.xl} {
-		color: pink;
+		/* color: pink; */
 	}
 `;
