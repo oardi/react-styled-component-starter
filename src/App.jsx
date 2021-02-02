@@ -1,9 +1,8 @@
 import React from "react";
 import { ThemeProvider } from 'styled-components';
 import "./style.scss";
-import { Button } from "./Button";
+import { Button, Layout } from "./components";
 import { theme } from './theme';
-import { Layout } from './Layout';
 
 const customTheme = Object.assign(theme, {});
 customTheme.palette.success = {
