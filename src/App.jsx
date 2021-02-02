@@ -34,7 +34,9 @@ export default function App() {
 
 				<Card className="mt-3">
 					<CardBody>
-						<Typography as="h1">TEST</Typography>
+						<Typography as="h1">Heading1</Typography>
+						<Typography>some span</Typography>
+						<Typography as="p">some paragraph</Typography>
 					</CardBody>
 				</Card>
 

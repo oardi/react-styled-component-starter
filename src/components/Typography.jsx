@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Wrapper = ({ wrapper, children }) =>
-	wrapper ? wrapper(children) : <div>{children}</div>;
+const Wrapper = ({ as, children, ...rest }) =>
+	as ? React.createElement(as, {...rest}, children) : <span>{children}</span>;
 
 
-const TypographyBase = ({ children, as }) => {
+const TypographyBase = ({ children, as = 'span', ...rest }) => {
 	return (
-		<Wrapper wrapper={as}>
+		<Wrapper as={as} {...rest}>
 			{children}
 		</Wrapper>
 	)
