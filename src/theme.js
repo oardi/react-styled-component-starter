@@ -42,7 +42,7 @@ export const theme = {
 	typography: {
 		htmlFontSize: 16,
 		fontFamily: `"Segoe UI", "Helvetica Neue", "Arial", "Noto Sans"`,
-		fontSize: 14,
+		fontSize: 16,
 		fontWeightLight: 300,
 		fontWeightRegular: 400,
 		fontWeightMedium: 500,
@@ -80,5 +80,12 @@ export const theme = {
 	shadows: [
 		'none',
 		'0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)'
+	],
+	space: [
+		'0.25rem',
+		'0.5rem',
+		'0.75rem',
+		'1rem',
+		'1.5rem'
 	]
 };

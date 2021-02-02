@@ -1,8 +1,8 @@
 import React from "react";
 import { ThemeProvider } from 'styled-components';
-import "./style.scss";
-import { Button, Layout } from "./components";
 import { theme } from './theme';
+import { Button, Layout, Card, CardBody, Typography } from "./components";
+import "./style.scss";
 
 const customTheme = Object.assign(theme, {});
 customTheme.palette.success = {
@@ -15,7 +15,7 @@ customTheme.palette.success = {
 export default function App() {
 	return (
 		<ThemeProvider theme={customTheme}>
-			<Layout>
+			<Layout className="p-3">
 				<h1>React Styled components</h1>
 
 				<Button variant="primary">primary</Button>
@@ -31,6 +31,13 @@ export default function App() {
 				<Button variant="success" style={{ marginLeft: "10px" }}>
 					success
       			</Button>
+
+				<Card className="mt-3">
+					<CardBody>
+						<Typography as="h1">TEST</Typography>
+					</CardBody>
+				</Card>
+
 			</Layout>
 		</ThemeProvider>
 	);
