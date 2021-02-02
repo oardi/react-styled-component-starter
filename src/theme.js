@@ -48,17 +48,42 @@ export const theme = {
 		fontWeightMedium: 500,
 		fontWeightBold: 700,
 		h1: {
-			fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif"`,
+			// fontFamily: `"Helvetica", "Arial", "sans-serif"`,
 			fontWeight: 300,
-			fontSize: "6rem",
+			fontSize: "2.5rem",
 			lineHeight: 1.167,
 			letterSpacing: "-0.01562em"
 		},
-		h2: null,
-		h3: null,
-		h4: null,
-		h5: null,
-		h6: null,
+		h2: {
+			fontWeight: 300,
+			fontSize: "2.25em",
+			lineHeight: 1.2,
+			letterSpacing: "-0.00833em"
+		},
+		h3: {
+			fontWeight: 400,
+			fontSize: "2rem",
+			lineHeight: 1.167,
+			letterSpacing: "0em"
+		},
+		h4: {
+			fontWeight: 400,
+			fontSize: "1.75rem",
+			lineHeight: 1.235,
+			letterSpacing: "0.00735em"
+		},
+		h5: {
+			fontWeight: 400,
+			fontSize: "1.5rem",
+			lineHeight: 1.334,
+			letterSpacing: "0em"
+		},
+		h6: {
+			fontWeight: 500,
+			fontSize: "1.25rem",
+			lineHeight: 1.6,
+			letterSpacing: "0.0075em"
+		},
 		subtitle1: null,
 		subtitle2: null,
 		body1: null,
@@ -79,7 +104,8 @@ export const theme = {
 	},
 	shadows: [
 		'none',
-		'0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)'
+		'0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
+		'0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);'
 	],
 	space: [
 		'0.25rem',

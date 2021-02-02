@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const Wrapper = ({ as, children, ...rest }) =>
-	as ? React.createElement(as, {...rest}, children) : <span>{children}</span>;
+const Wrapper = ({ as, children, className, ...rest }) =>
+	as ? React.createElement(as, { ...rest, className: `${className} gutter-bottom` }, children) : <span>{children}</span>;
 
 
 const TypographyBase = ({ children, as = 'span', ...rest }) => {
@@ -13,5 +13,4 @@ const TypographyBase = ({ children, as = 'span', ...rest }) => {
 	)
 }
 
-export const Typography = styled(TypographyBase)`
-`;
+export const Typography = styled(TypographyBase).attrs(() => ({ className: "gutterBottom" }))``;

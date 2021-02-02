@@ -1,12 +1,6 @@
-import React from "react";
 import styled, { css } from "styled-components";
 
-const ButtonBase = (props) => {
-	const { children, ...rest } = props;
-	return <button {...rest}>{children}</button>;
-};
-
-export const Button = styled(ButtonBase)`
+export const Button = styled.button.attrs(() => ({ className: "btn" }))`
 	border: 0;
 	padding: 6px 16px;
 	line-height: 1.75;
@@ -14,7 +8,7 @@ export const Button = styled(ButtonBase)`
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-	${({ theme, variant }) => css`
+	${({ theme, variant = 'primary', disabled }) => css`
 		color: ${theme.palette[variant].contrastText};
 		background-color: ${theme.palette[variant].main};
 		border-radius: ${theme.shape.borderRadius}px;
@@ -24,6 +18,21 @@ export const Button = styled(ButtonBase)`
 		&:hover {
 			cursor: pointer;
 			background-color: ${theme.palette[variant].dark};
+			box-shadow: ${theme.shadows[2]};
 		}
+
+		${disabled && css`
+			color: rgba(0, 0, 0, 0.26);
+			box-shadow: none;
+			background-color: rgba(0, 0, 0, 0.12);
+
+			&:hover {
+				cursor: inherit;
+				color: rgba(0, 0, 0, 0.26);
+				box-shadow: none;
+				background-color: rgba(0, 0, 0, 0.12);
+			}
+
+		`}
 	`}
 `;
