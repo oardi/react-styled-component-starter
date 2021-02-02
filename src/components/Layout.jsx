@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const LayoutBase = (props) => {
 	const { children, ...rest } = props;
@@ -7,8 +7,12 @@ const LayoutBase = (props) => {
 };
 
 export const Layout = styled(LayoutBase)`
-	:root {
-	}
+	height: 100%;
+
+	${({ theme }) => css`
+		font-family: ${theme.typography.fontFamily};
+		background: ${theme.palette.background.default};
+	`}
 
 	@media ${({ theme }) => theme.mediaQueries.xs} {
 		/* color: red; */

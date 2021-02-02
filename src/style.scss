@@ -1,10 +1,6 @@
-@import '../node_modules/modern-normalize/modern-normalize.css';
+@import "../node_modules/modern-normalize/modern-normalize.css";
 
+html,
 body {
-	font-family: "Segoe UI", "Helvetica Neue", Arial, "Noto Sans";
-	background: var(--body-bg);
-}
-
-test {
-	color: #b6b6b6,
+	height: 100%;
 }

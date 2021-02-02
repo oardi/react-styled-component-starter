@@ -19,6 +19,7 @@ export const Button = styled(ButtonBase)`
 		background-color: ${theme.palette[variant].main};
 		border-radius: ${theme.shape.borderRadius}px;
 		min-width: ${theme.button.minWidth}px;
+		box-shadow: ${theme.shadows[1]};
 
 		&:hover {
 			cursor: pointer;
