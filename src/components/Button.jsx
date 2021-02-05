@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components/macro";
 
-export const Button = styled.button.attrs(() => ({ className: "btn" }))`
+export const Button = styled.button`
 	border: 0;
 	padding: 6px 16px;
 	line-height: 1.75;

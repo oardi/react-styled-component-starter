@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components/macro';
 
 const Wrapper = ({ as, children, className, ...rest }) =>
 	as ? React.createElement(as, { ...rest, className: `${className} gutter-bottom` }, children) : <span>{children}</span>;

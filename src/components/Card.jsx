@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components/macro";
 
-export const Card = styled.div.attrs(() => ({ className: "card" }))`
+export const Card = styled.div`
 	background-color: #fff;
 
 	${({ theme }) => css`
@@ -9,6 +9,6 @@ export const Card = styled.div.attrs(() => ({ className: "card" }))`
 	`}
 `;
 
-export const CardBody = styled.div.attrs(() => ({ className: "card-body" }))`
+export const CardBody = styled.div`
 	padding: ${({ theme }) => theme.space[3]};
 `;
