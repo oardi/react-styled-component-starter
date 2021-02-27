@@ -32,7 +32,6 @@ export const Button = styled.button`
 				box-shadow: none;
 				background-color: rgba(0, 0, 0, 0.12);
 			}
-
 		`}
 	`}
 `;
